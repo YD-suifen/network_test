@@ -30,7 +30,7 @@ func Ip(w http.ResponseWriter, r *http.Request) {
 	ip := strings.Split(ipport, ":")
 	infojson := Ipinfo(ip[0])
 
-	tmp1 := template.Must(template.ParseFiles("first.html"))
+	tmp1 := template.Must(template.ParseFiles("index.html"))
 	jsontype := INfojsontmp{
 		IP:           infojson.IP,
 		HostName:     infojson.HostName,
@@ -54,6 +54,11 @@ func Ipinfo(ip string) *ipinfo.Info {
 func main() {
 
 	http.HandleFunc("/ip", Ip)
-	http.ListenAndServe(":8080", nil)
+
+	// 设置静态目录
+	fsh := http.FileServer(http.Dir("/Users/wangzhijian/jiange/go/src/network_test/static"))
+	http.Handle("/static/", http.StripPrefix("/static/", fsh))
+
+	http.ListenAndServe(":8081", nil)
 
 }

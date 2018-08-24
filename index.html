@@ -1,0 +1,230 @@
+
+
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8" name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>小迷妹</title>
+    <link rel="stylesheet" href="/static/css/style.min.css">
+    <script type="text/javascript" src="/static/jquery/jquery-3.1.1.js"></script>
+    <script type="text/javascript" src="/static/jquery/jquery.cookie.js"></script>
+    <script type="text/javascript" src="/static/js/main.min.js"></script>
+</head>
+<body>
+
+<div class="container-fluid">
+    <div class="page-header">
+        <h1>
+            <img src="/static/images/logo.png" width="108" height="108" alt="logo">
+        </h1>
+    </div>
+    
+    <script>
+        var checkSites = {
+                'cc': 'https://changchun.yukehulian.com/static/img/favicon.ico',
+            
+                'qq': 'http://www.qq.com/favicon.ico',
+            
+                'sina': 'http://www.sina.com.cn/favicon.ico',
+            
+                'baidu': 'https://www.baidu.com/favicon.ico',
+            
+                'com': 'http://weibo.com/favicon.ico',
+            
+                'tmall': 'https://www.tmall.com/favicon.ico',
+            
+                'taobao': 'https://www.taobao.com/favicon.ico',
+            
+                '163': 'http://www.163.com/favicon.ico',
+            
+                'ifeng': 'http://www.ifeng.com/favicon.ico',
+            
+        }
+    </script>
+    <input type='hidden' name='csrfmiddlewaretoken' value='hJ5KOZqD0fGmHIpVHZwtMEVbeUgJdtfp658G9a3dOmbEdePcLM4fEk9hjeHuIWhh' />
+    <div class="col-md-12" onload="flashChecker()">
+        <div class=" panel">
+            <div class="panel-heading">
+                <i class="icon icon-lightbulb"></i> 客户端网络环境
+            </div>
+            <div class="panel-body">
+                <table class="table table-hover table-striped ">
+                    <tbody>
+                    <tr>
+                        <td style="width: 30%">
+                            您当前的IP为：
+                        </td>
+                        <td>
+                            <div id="client_ip">
+                                114.244.115.62
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td style="width: 30%">
+                            您的运营商为：
+                        </td>
+                        <td>
+                            <div id="client_isp">
+                                中国 北京 北京 联通 
+                            </div>
+                        </td>
+                    </tr>
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-md-12">
+        <div class="panel">
+            <div class="panel-heading">
+                <i class="icon icon-th-list"></i> 测试结果
+            </div>
+            <div class="panel-body">
+                <table class="table table-hover table-striped">
+                    <thead>
+                    <tr>
+                        <th>
+                            测试站点
+                        </th>
+                        <th>
+                            请求耗时
+                        </th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    
+                        <tr>
+                            <td style="width: 30%">
+                                www.qq.com
+                            </td>
+                            <td>
+                                <div id="osite_qq">
+                                    测试中...
+                                </div>
+                            </td>
+                        </tr>
+                    
+                        <tr>
+                            <td style="width: 30%">
+                                www.sina.com.cn
+                            </td>
+                            <td>
+                                <div id="osite_sina">
+                                    测试中...
+                                </div>
+                            </td>
+                        </tr>
+                    
+                        <tr>
+                            <td style="width: 30%">
+                                www.baidu.com
+                            </td>
+                            <td>
+                                <div id="osite_baidu">
+                                    测试中...
+                                </div>
+                            </td>
+                        </tr>
+                    
+                        <tr>
+                            <td style="width: 30%">
+                                weibo.com
+                            </td>
+                            <td>
+                                <div id="osite_com">
+                                    测试中...
+                                </div>
+                            </td>
+                        </tr>
+                    
+                        <tr>
+                            <td style="width: 30%">
+                                www.tmall.com
+                            </td>
+                            <td>
+                                <div id="osite_tmall">
+                                    测试中...
+                                </div>
+                            </td>
+                        </tr>
+                    
+                        <tr>
+                            <td style="width: 30%">
+                                www.taobao.com
+                            </td>
+                            <td>
+                                <div id="osite_taobao">
+                                    测试中...
+                                </div>
+                            </td>
+                        </tr>
+                    
+                        <tr>
+                            <td style="width: 30%">
+                                www.163.com
+                            </td>
+                            <td>
+                                <div id="osite_163">
+                                    测试中...
+                                </div>
+                            </td>
+                        </tr>
+                    
+                        <tr>
+                            <td style="width: 30%">
+                                www.ifeng.com
+                            </td>
+                            <td>
+                                <div id="osite_ifeng">
+                                    测试中...
+                                </div>
+                            </td>
+                        </tr>
+                    
+                        <tr>
+                            <td style="width: 30%">
+                                logincc.kelehudong.com
+                            </td>
+                            <td>
+                                <div id="osite_cc">
+                                    测试中...
+                                </div>
+                            </td>
+                        </tr>
+                    
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+    <hr>
+    <script type="text/javascript" src="/static/track/ClientMsg.js"></script>
+    
+    
+    <script type="text/javascript" src="/static/track/OCheck.js"></script>
+
+</div>
+</body>
+</html>
