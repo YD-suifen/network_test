@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>
+    </title>
+</head>
+
+<body>
+      本地信息
+    <p>
+     <br> 本地出口ip： {{.IP}}
+     <br> 所在城市： {{.City}}
+     <br> 所在地区： {{.Region}}
+     <br> 所在国家： {{.Country}}
+     <br> 所属运营商： {{.Organization}}
+    </p>
+
+    <p id="loadtime"></p>
+</body>
+<script>
+  window.onload = function () {
+      console.log((performance.timing.responseEnd - performance.timing.requestStart))
+
+      document.getElementById('loadtime').innerHTML = '本地到科乐阿里服务器延迟=' + (performance.timing.responseEnd - performance.timing.requestStart);
+  }
+</script>
+</html>
