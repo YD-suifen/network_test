@@ -22,6 +22,11 @@
     <script>
         var checkSites = {
                 'cc': 'https://changchun.yukehulian.com/static/img/favicon.ico',
+                'xinganmen': 'https://xinganmeng.yukehulian.com/static/img/favicon.ico',
+                'tdk': 'https://tdk.yukehulian.com/favicon.ico',
+                'ttttools': 'http://tools.kelehd.com:30500/favicon.ico',
+                // 'logictdk1': 'http://logictdk01.kelehd.com:30211/test',
+                'logictdk1': 'http://logictdk01.kelehd.com/favicon.ico',
             
                 'qq': 'http://www.qq.com/favicon.ico',
             
@@ -56,7 +61,7 @@
                         </td>
                         <td>
                             <div id="client_ip">
-                                114.244.115.62
+                                {{.IP}}
                             </div>
                         </td>
                     </tr>
@@ -66,7 +71,17 @@
                         </td>
                         <td>
                             <div id="client_isp">
-                                中国 北京 北京 联通 
+                                {{.Organization}} 
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td style="width: 30%">
+                            您的地区为：
+                        </td>
+                        <td>
+                            <div id="client_isp">
+                                {{.City}}-{{.Region}}
                             </div>
                         </td>
                     </tr>
@@ -205,11 +220,54 @@
                     
                         <tr>
                             <td style="width: 30%">
-                                logincc.kelehudong.com
+                                changchun.yukehulian.com
                             </td>
                             <td>
                                 <div id="osite_cc">
                                     测试中...
+                                </div>
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td style="width: 30%">
+                                    xinganmeng.yukehulian.com
+                            </td>
+                            <td>
+                                <div id="osite_xinganmen">
+                                        测试中...
+                                </div>
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td style="width: 30%">
+                                tdk.yukehulian.com
+                            </td>
+                            <td>
+                                <div id="osite_tdk">
+                                        测试中...
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td style="width: 30%">
+                                tools.kelehd.com
+                            </td>
+                            <td>
+                                <div id="osite_ttttools">
+                                        测试中...
+                                </div>
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td style="width: 30%">
+                                logictdk01.kelehd.com
+                            </td>
+                            <td>
+                                <div id="osite_logictdk1">
+                                        测试中...
                                 </div>
                             </td>
                         </tr>
